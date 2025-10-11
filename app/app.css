@@ -81,7 +81,7 @@ form {
     @apply flex flex-col items-center gap-8 pt-12 max-sm:mx-2 mx-15 pb-5;
   }
   .page-heading {
-    @apply flex flex-col mx-6 mt-6 items-center gap-8 max-w-4xl text-center select-none max-sm:gap-4 min-[950px]:mx-auto;
+    @apply flex flex-col mx-6 items-center gap-8 max-w-4xl text-center select-none max-sm:gap-4;
   }
   .resumes-container {
     @apply flex flex-wrap max-md:flex-col max-md:gap-4 items-start max-md:items-center w-full max-w-[1850px] justify-evenly;
