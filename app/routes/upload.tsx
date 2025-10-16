@@ -137,7 +137,7 @@ const Upload = () => {
       type: "SET_STATUS_TEXT",
       payload: "Analysis complete! Redirecting...",
     });
-    console.log("Analysis complete:", JSON.parse(data.feedback));
+    navigate(`/resume/${uuid}`);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
