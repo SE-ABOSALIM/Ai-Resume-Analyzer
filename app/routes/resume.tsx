@@ -50,8 +50,28 @@ const Resume = () => {
 
       const imageUrl = URL.createObjectURL(imgBlob);
       setImageUrl(imageUrl);
-      setFeedback(data.feedback);
-      console.log({ resumeUrl, imageUrl, feedback: data.feedback });
+
+      // `data.feedback` is saved as a JSON string in upload.tsx; normalize it here
+      let fb: Feedback | null = null;
+      if (data.feedback) {
+        if (typeof data.feedback === "string") {
+          try {
+            fb = JSON.parse(data.feedback) as Feedback;
+          } catch (err) {
+            console.error(
+              "Failed to parse stored feedback JSON",
+              err,
+              data.feedback
+            );
+            fb = null;
+          }
+        } else {
+          fb = data.feedback as Feedback;
+        }
+      }
+
+      setFeedback(fb);
+      console.log({ resumeUrl, imageUrl, feedback: fb });
     };
 
     loadResume();
@@ -86,11 +106,11 @@ const Resume = () => {
           {feedback ? (
             <div className="flex flex-col gap-8 animate-in fade-in duration-1000">
               <Summary feedback={feedback} />
-              <ATS
+              {/* <ATS
                 score={feedback.ATS.score || 0}
                 suggestions={feedback.ATS.tips || []}
-              />
-              <Details feedback={feedback} />
+              /> */}
+              {/* <Details feedback={feedback} /> */}
             </div>
           ) : (
             <img src="/images/resume-scan-2.gif" className="w-full" />
