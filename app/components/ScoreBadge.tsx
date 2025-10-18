@@ -10,7 +10,7 @@ const ScoreBadge = ({ score }: { score: number }) => {
     bgClass = "bg-badge-green";
     textClass = "text-green-600";
     label = "Strong";
-  } else if (score < 69 && score > 49) {
+  } else if (score <= 69 && score > 49) {
     bgClass = "bg-badge-yellow";
     textClass = "text-yellow-700";
     label = "Good";
