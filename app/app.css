@@ -20,18 +20,18 @@
 
 html,
 body {
-  @apply bg-white;
+  @apply bg-gray-50;
 }
 
 main {
-  @apply min-h-screen pt-10;
+  @apply min-h-screen;
 }
 h1 {
-  @apply max-sm:text-[3rem] text-6xl  text-gradient leading-tight xl:tracking-[-2px] font-semibold;
+  @apply text-4xl md:text-5xl lg:text-6xl text-gradient leading-tight font-semibold;
 }
 
 h2 {
-  @apply max-sm:text-xl text-3xl text-dark-200;
+  @apply text-xl md:text-2xl lg:text-2xl text-gray-600 font-medium;
 }
 
 label {
@@ -78,21 +78,21 @@ form {
     @apply primary-gradient rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
   }
   .main-section {
-    @apply flex flex-col items-center gap-8 pt-12 max-sm:mx-2 mx-15 pb-5;
+    @apply flex flex-col items-center gap-8 md:gap-12 pt-4 px-4 pb-8 max-w-7xl mx-auto;
   }
   .page-heading {
-    @apply flex flex-col mx-6 items-center gap-8 max-w-4xl text-center select-none max-sm:gap-4;
+    @apply flex flex-col items-center gap-4 md:gap-6 max-w-4xl text-center select-none px-4;
   }
   .resumes-container {
-    @apply flex flex-wrap max-md:flex-col max-md:gap-4 items-start max-md:items-center w-full max-w-[1850px] justify-evenly;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-7xl;
   }
 
   .resume-card {
-    @apply flex flex-col h-auto w-full lg:w-[430px] xl:w-[490px] bg-white rounded-2xl p-4 mb-4 max-md:mx-0;
+    @apply flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100;
   }
 
   .resume-card-header {
-    @apply flex flex-row gap-2 !justify-between min-h-[110px] mx-4 max-sm:flex-row items-center max-md:justify-center max-md:items-center;
+    @apply flex flex-row justify-between items-start p-6 pb-4;
   }
 
   .feedback-section {
@@ -100,7 +100,7 @@ form {
   }
 
   .navbar {
-    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 max-w-[1200px] mx-6 min-xl:mx-auto;
+    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 px-4 sm:px-8 max-w-4xl mx-auto shadow-sm border border-gray-100 mt-6 mb-4 gap-30 sm:gap-32 md:gap-64 lg:gap-96;
   }
 
   .score-badge {
