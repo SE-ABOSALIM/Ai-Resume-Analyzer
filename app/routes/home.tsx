@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 bg-[url('/images/bg-main.svg')] bg-cover">
       <Navbar />
 
       <section className="main-section">
